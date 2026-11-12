@@ -6,12 +6,12 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "NODE_OPTIONS=--max-old-space-size=1800 tsc -p tsconfig.json",
+    "build": "npx tsc -p tsconfig.json",
     "start": "node dist/server.js",
     "test": "vitest run",
     "test:watch": "vitest",
     "seed": "tsx src/seed.ts",
-    "typecheck": "NODE_OPTIONS=--max-old-space-size=1800 tsc -p tsconfig.json --noEmit"
+    "typecheck": "npx tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -27,7 +27,8 @@
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "nanoid": "^5.0.9",
-    "zod": "^3.23.8"
+    "vite": "8.3.8",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
@@ -44,6 +45,6 @@
     "supertest": "^7.0.0",
     "tsx": "^4.19.2",
     "typescript": "^5.6.3",
-    "vitest": "^2.1.4"
+    "vitest": "^5.1.0"
   }
 }
